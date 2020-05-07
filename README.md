@@ -17,7 +17,11 @@ This example shows how to wire up S3 file conversion that runs an external proce
 
 ## Try it out
 
-Once you've installed everything, send a test file, for example a markdown file, to your bucket using the S3 console, or the AWS CLI tools. The command lines below assume the bucket is called `pandoc-test-bucket`, so adjust the commands for your bucket name accordingly.
+Once you've installed everything, send a test file, for example a markdown file, to your bucket using the S3 console, or the AWS CLI tools. The command lines below assume the bucket is called `pandoc-test-bucket`, so adjust the commands for your bucket name accordingly.  The convert.js code assumes that there is a template docx at the root of the bucket.  See: https://pandoc.org/MANUAL.html#option--reference-doc
+
+```bash
+aws s3 cp reference.docx s3://pandoc-test-bucket/reference.docx
+```
 
 ```bash
 aws s3 cp example.md s3://pandoc-test-bucket/in/example.md
