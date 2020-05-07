@@ -1,0 +1,7 @@
+{
+  "lambda": {
+    "role": "pandoc-s3-converter-executor",
+    "name": "pandoc-s3-converter",
+    "region": "us-east-2"
+  }
+}
